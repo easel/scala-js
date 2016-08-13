@@ -1038,6 +1038,10 @@ abstract class ByteBufferTest extends BaseBufferTest {
     assertNotEquals(new Int8Array(0), null)
   }
 
+  @Test def createNonEmptyInt8Array(): Unit = {
+    assertNotEquals(new Int8Array(1), null)
+  }
+
   @Test def asDoubleBuffer_Bytes_to_Doubles(): Unit = {
     val buf = withContent(pos = 0, limit = 20, capacity = 20,
         0x20, 0xe8.toByte,
