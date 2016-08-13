@@ -13,7 +13,7 @@ addSbtPlugin("org.scalastyle" % "scalastyle-sbt-plugin" % "0.8.0")
 
 libraryDependencies += "org.scala-js" % "closure-compiler-java-6" % "v20160517"
 
-libraryDependencies += "io.apigee" % "rhino" % "1.7R5pre4"
+libraryDependencies += "org.mozilla" % "rhino" % "1.7.7.1"
 
 libraryDependencies += "org.webjars" % "envjs" % "1.2"
 
