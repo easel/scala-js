@@ -1028,6 +1028,10 @@ abstract class ByteBufferTest extends BaseBufferTest {
       assertEquals(0, buf.position())
     }
   }
+  
+  @Test def allocateEmpty(): Unit = {
+    assertNotEquals(ByteBuffer.allocateDirect(0), null)
+  }
 
   @Test def asDoubleBuffer_Bytes_to_Doubles(): Unit = {
     val buf = withContent(pos = 0, limit = 20, capacity = 20,
