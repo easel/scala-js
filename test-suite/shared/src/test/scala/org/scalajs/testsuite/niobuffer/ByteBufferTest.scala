@@ -12,8 +12,9 @@ import java.nio._
 import org.junit.Test
 import org.junit.Assert._
 import org.scalajs.testsuite.niobuffer.BufferFactory.ByteBufferFactory
-
 import org.scalajs.testsuite.utils.AssertThrows._
+
+import scala.scalajs.js.typedarray.Int8Array
 
 abstract class ByteBufferTest extends BaseBufferTest {
   type Factory = BufferFactory.ByteBufferFactory
@@ -1031,6 +1032,10 @@ abstract class ByteBufferTest extends BaseBufferTest {
   
   @Test def allocateEmpty(): Unit = {
     assertNotEquals(ByteBuffer.allocateDirect(0), null)
+  }
+  
+  @Test def createEmptyInt8Array(): Unit = {
+    assertNotEquals(new Int8Array(0), null)
   }
 
   @Test def asDoubleBuffer_Bytes_to_Doubles(): Unit = {
